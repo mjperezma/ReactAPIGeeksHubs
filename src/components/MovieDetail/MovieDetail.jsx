@@ -1,14 +1,13 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './MovieDetail.scss';
 import {Link} from 'react-router-dom';
 
 const MovieDetail = (props) => {
   let listaGeneros = props.genresTwo;
-  // console.log(listaGeneros);
-  // console.log(props.movie.genres);
   const {title, id, resume, image, nota, date, orTitle} = props.movie;
 
-  let listaGenerosFiltrado = listaGeneros.map((genre) => {
+  let genderFiltered = listaGeneros.map((genre) => {
     for (let x of props.movie.genres) {
       if (genre.id === x) {
         return `${genre.type} `;
@@ -28,11 +27,11 @@ const MovieDetail = (props) => {
           <span className='article__detail__resume'>{resume}</span>
           <span>Average Rating: {nota}</span>
           <span>Release Date: {date}</span>
-          <span> Genres: {listaGenerosFiltrado}.</span>
+          <span> Genres: {genderFiltered}.</span>
         </div>
       </article>
       <Link to='/' className='article__detail__link'>
-        <button className='card__movie__button detail'>
+        <button className='card__result__button detail'>
           Come back
           <span className='round'>
             <i className='fa fa-chevron-right'></i>
@@ -41,6 +40,10 @@ const MovieDetail = (props) => {
       </Link>
     </>
   );
+};
+
+MovieDetail.propTypes = {
+  movie: PropTypes.object,
 };
 
 export default MovieDetail;
