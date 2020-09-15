@@ -1,0 +1,28 @@
+.article__detail {
+
+    display: flex;
+    margin: 0 3rem;
+
+    &__img {
+        width: 15rem;
+        height: auto;
+        margin: 1.5rem;
+    }
+
+    &__link {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-decoration: none;
+    }
+
+}
+
+
+.article__detail div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+
+}

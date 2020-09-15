@@ -1,0 +1,19 @@
+.container__carousel {
+    margin: 1.5rem 0 3rem 0;
+
+    &__img {
+
+        margin: auto;
+        width: 70%;
+        height: 75vh;
+        opacity: 70%;
+    }
+}
+
+.slick-next {
+    right: 25px;
+}
+
+.slick-prev {
+    left: 25px;
+}
