@@ -10,7 +10,7 @@ import ApiFetchTv from '../api/ServicesTv.jsx';
 import TvShowList from '../TvShowList/TvShowList.jsx';
 import TvShowDetail from '../TvShowDetail/TvShowDetail.jsx';
 import Button from '../Button/Button.jsx';
-import useSearch from '../api/useSearch.jsx';
+import useSearch from '../api/ServicesMovies.jsx';
 
 function App() {
   const [genres, setGenderFilter] = useState([]);
