@@ -1,7 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import './App.scss';
 import Header from '../Header/Header.jsx';
-import ApiFetch from '../api/Services.jsx';
 import ApiFetchGender from '../api/ServicesGender.jsx';
 import Main from '../Main/Main';
 import {Route, Switch} from 'react-router-dom';
@@ -10,17 +9,13 @@ import Footer from '../Footer/Footer';
 import ApiFetchTv from '../api/ServicesTv.jsx';
 import TvShowList from '../TvShowList/TvShowList.jsx';
 import TvShowDetail from '../TvShowDetail/TvShowDetail.jsx';
+import Button from '../Button/Button.jsx';
+import useSearch from '../api/useSearch.jsx';
 
 function App() {
-  const [movies, setMovies] = useState([]);
   const [genres, setGenderFilter] = useState([]);
   const [tvshows, setTvShows] = useState([]);
-
-  useEffect(() => {
-    ApiFetch().then((data) => {
-      setMovies(data);
-    });
-  }, []);
+  const {movies, loadMoreMovies} = useSearch();
 
   useEffect(() => {
     ApiFetchGender().then((data) => {
@@ -66,6 +61,7 @@ function App() {
         </Route>
         <Route path='/tvshowdetail/:id' render={renderTvShowDetail} />
       </Switch>
+      <Button onLoad={loadMoreMovies} />
       <Footer />
     </div>
   );

@@ -5,7 +5,7 @@ import MovieCard from '../MovieCard/MovieCard.jsx';
 
 const MovieList = (props) => {
   return (
-    <>
+    <section>
       <h2 className='container__results__title'>most voted films</h2>
       <ul className='container__results'>
         {props.movies.map((movie) => {
@@ -16,7 +16,7 @@ const MovieList = (props) => {
           );
         })}
       </ul>
-    </>
+    </section>
   );
 };
 
