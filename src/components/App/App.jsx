@@ -9,7 +9,6 @@ import Footer from '../Footer/Footer';
 import ApiFetchTv from '../api/ServicesTv.jsx';
 import TvShowList from '../TvShowList/TvShowList.jsx';
 import TvShowDetail from '../TvShowDetail/TvShowDetail.jsx';
-import Button from '../Button/Button.jsx';
 import useSearch from '../api/ServicesMovies.jsx';
 
 function App() {
@@ -53,7 +52,7 @@ function App() {
       <Header />
       <Switch>
         <Route exact path='/'>
-          <Main movies={movies} />
+          <Main movies={movies} loadMoreMovies={loadMoreMovies} />
         </Route>
         <Route path='/moviedetail/:id' render={renderMovieDetail} />
         <Route path='/TvShow'>
@@ -61,7 +60,6 @@ function App() {
         </Route>
         <Route path='/tvshowdetail/:id' render={renderTvShowDetail} />
       </Switch>
-      <Button onLoad={loadMoreMovies} />
       <Footer />
     </div>
   );

@@ -4,12 +4,12 @@ import MovieList from '../MovieList/MovieList.jsx';
 
 import './Main.scss';
 
-const Main = (props) => {
+const Main = ({movies, loadMoreMovies}) => {
   return (
     <main>
       <section>
         <CarouselMovies />
-        <MovieList movies={props.movies} />
+        <MovieList movies={movies} loadMoreMovies={loadMoreMovies} />
       </section>
     </main>
   );

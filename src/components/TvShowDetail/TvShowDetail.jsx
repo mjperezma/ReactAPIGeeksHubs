@@ -2,8 +2,8 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import PropTypes from 'prop-types';
 
-const TvShowDetail = (props) => {
-  const {title, id, resume, image, votes, nota, date, orTitle, popularity} = props.tvshow;
+const TvShowDetail = ({tvshow}) => {
+  const {title, id, resume, image, votes, nota, date, orTitle, popularity} = tvshow;
   return (
     <>
       <article className='article__detail'>

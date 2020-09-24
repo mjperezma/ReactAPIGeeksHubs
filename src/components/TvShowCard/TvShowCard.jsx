@@ -2,8 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {Link} from 'react-router-dom';
 
-const TvShowCard = (props) => {
-  const {title, image, votes, id} = props.tvshow;
+const TvShowCard = ({tvshow}) => {
+  const {title, image, votes, id} = tvshow;
   return (
     <>
       <img className='card__result__img' src={`https://image.tmdb.org/t/p/original/${image}`} alt={title} />
