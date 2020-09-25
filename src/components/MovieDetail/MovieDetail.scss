@@ -26,3 +26,33 @@
 
 
 }
+
+@media(max-width: 480px) {
+
+    .article__detail {
+
+        flex-direction: column;
+
+        &__img {
+            margin: 0 auto;
+            margin-top: 2rem;
+            width: 8rem;
+            height: 15rem;
+        }
+
+    }
+
+    .article__detail span {
+        font-size: 0.8rem;
+
+    }
+
+    .article__detail h3 {
+        font-size: 0.9rem;
+    }
+
+    .article__detail__link {
+
+        margin-top: 2rem;
+    }
+}
