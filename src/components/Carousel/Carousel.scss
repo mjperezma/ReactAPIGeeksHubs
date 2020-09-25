@@ -17,3 +17,18 @@
 .slick-prev {
     left: 25px;
 }
+
+
+@media(max-width: 480px) {
+
+    .container__carousel {
+
+        &__img {
+            width: 90%;
+        }
+    }
+
+
+
+
+}
