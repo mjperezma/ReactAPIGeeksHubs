@@ -21,6 +21,8 @@
     "slick-carousel": "^1.8.1"
   },
   "scripts": {
+    "docs": "rm -rf docs && react-scripts build && mv build docs",
+    "push-docs": "npm run docs && git add docs/* && git commit -m \"Update docs\" && git push",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
