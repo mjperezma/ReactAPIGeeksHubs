@@ -1,3 +1,12 @@
-# ReactAPIGeeksHubs
+# *Visor de películas y series**
 
-Proyecto personal final GeeksHubs Academy
+En este repositorio podrás acceder a una página web donde puedes filtrar por películas y series, además puedes visualizar más paginas de las primeras 10 que se muestran. Además gracias a utilizar React router, puedes acceder a ver más información sobre la película que desees ver, y encontrar información añadida sobre la seleccionada.
+
+
+Este trabajo ha sido realizado con: 
+- JSX
+- SCSS
+- React
+ 
+
+Hecho con por ❤️ mjperezma.
