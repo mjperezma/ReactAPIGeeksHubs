@@ -10,4 +10,4 @@ Este trabajo ha sido realizado con:
 - React
  
 
-Hecho con por ❤️ mjperezma.
+Hecho con ❤️ por  mjperezma.
